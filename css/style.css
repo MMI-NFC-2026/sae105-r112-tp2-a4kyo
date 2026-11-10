@@ -1,1 +1,38 @@
-/* code css à faire */
+.menu {
+    width: 100%; /* regle la largeur du menu*/
+    height: 100%; /* regle la hauteur du menu*/
+    border: 0; /* désactive les bordure*/
+    transition: 400ms allow-discrete; /* on regle les transition sur 400ms */
+    opacity: 0; /* On regle l'opacité a 0 (on voit plus le fond)*/
+}
+
+html :has(.menu:popover-open) {
+    overflow: hidden; /* empeche le scroll en arriere plan*/
+}   
+
+.burger {
+    cursor: pointer; /* change l'apparence du curseur*/
+}
+
+@starting-style {
+  .menu:popover-open {
+    opacity: 0; /* regle l'opacité sur 0 */
+  }
+}
+.menu:popover-open .burger--close {
+        transform: none;
+    }
+.menu:popover-open{
+    opacity: 1;
+}
+.menu:popover-open .burger--close {
+    transform: rotate(180deg);
+    transition: 400ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .menu,
+    .menu .burger--close{
+    transition: reduce;
+    }
+}
