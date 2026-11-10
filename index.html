@@ -1,10 +1,18 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 
 <head>
+  <!-- Définit l'encodage des caractères pour afficher correctement les accents -->
   <meta charset="utf-8">
+
+  <!-- Adapte l'affichage de la page à la largeur de l'écran -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Définit le titre affiché dans l'onglet du navigateur -->
   <title>Test de menu</title>
+
+  <!-- Relie le fichier CSS à la page HTML -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -12,14 +20,20 @@
   <header class="header header--home">
 
     <!-- Menu principal -->
+
+    <!-- Bouton burger permettant d'ouvrir et de fermer le menu popover -->
     <button class="burger" type="button" popovertarget="menu" aria-label="Menu">
       🍔
     </button>
 
+    <!-- Navigation principale déclarée comme popover grâce à l'attribut popover -->
+    <!-- L'identifiant menu permet au bouton burger de cibler cet élément -->
     <nav class="menu" id="menu" popover aria-label="Main menu">
-      <button 
-        class="menu__close burger burger--close" 
-        type="button" 
+
+      <!-- Bouton permettant de fermer explicitement le menu -->
+      <button
+        class="menu__close burger burger--close"
+        type="button"
         popovertarget="menu"
         popovertargetaction="hide"
         aria-label="Close the menu"
@@ -27,26 +41,50 @@
       >
         🍔
       </button>
+
+      <!-- Liste des différents liens de navigation -->
       <ul class="menu__list">
-        <li class="menu__item"><a class="menu__link" href="#">Item de menu un</a></li>
-        <li class="menu__item"><a class="menu__link" href="#">Item de menu deux</a></li>
-        <li class="menu__item"><a class="menu__link" href="#">Item de menu trois</a></li>
-        <li class="menu__item"><a class="menu__link" href="#">Item de menu quatre</a></li>
+
+        <!-- Premier élément du menu -->
+        <li class="menu__item">
+          <a class="menu__link" href="#">Item de menu un</a>
+        </li>
+
+        <!-- Deuxième élément du menu -->
+        <li class="menu__item">
+          <a class="menu__link" href="#">Item de menu deux</a>
+        </li>
+
+        <!-- Troisième élément du menu -->
+        <li class="menu__item">
+          <a class="menu__link" href="#">Item de menu trois</a>
+        </li>
+
+        <!-- Quatrième élément du menu -->
+        <li class="menu__item">
+          <a class="menu__link" href="#">Item de menu quatre</a>
+        </li>
+
       </ul>
     </nav>
+
     <!-- Fin du menu principal -->
   </header>
 
   <!-- Contenu principal de la page -->
   <main>
+
+    <!-- Titre principal de la page -->
     <h1>Test de menu</h1>
+
+    <!-- Paragraphe de présentation -->
     <p>
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam fugit maiores accusamus quisquam ad veritatis
       officiis numquam ex rem porro, amet sapiente eaque. Rerum excepturi eaque atque ipsa quos mollitia.
     </p>
+
   </main>
   <!-- Fin du contenu principal -->
 
 </body>
-
 </html>

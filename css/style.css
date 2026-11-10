@@ -6,7 +6,7 @@
     opacity: 0; /* On regle l'opacité a 0 (on voit plus le fond)*/
 }
 
-html :has(.menu:popover-open) {
+html:has(.menu:popover-open) {
     overflow: hidden; /* empeche le scroll en arriere plan*/
 }   
 
@@ -18,21 +18,21 @@ html :has(.menu:popover-open) {
   .menu:popover-open {
     opacity: 0; /* regle l'opacité sur 0 */
   }
-}
 .menu:popover-open .burger--close {
-        transform: none;
+        transform: none; /* le bouton commence dans sa position initiale */
     }
+}
 .menu:popover-open{
-    opacity: 1;
+    opacity: 1; /* rend le menu totalement visible */
 }
 .menu:popover-open .burger--close {
-    transform: rotate(180deg);
-    transition: 400ms;
+    transform: rotate(90deg); /* effectue une rotation de 90 degrés */
+    transition: 400ms;  /* définit une animation de 400 ms */
 }
 
 @media (prefers-reduced-motion: reduce) {
     .menu,
     .menu .burger--close{
-    transition: reduce;
+    transition: none; /* désactive les transitions */
     }
 }
