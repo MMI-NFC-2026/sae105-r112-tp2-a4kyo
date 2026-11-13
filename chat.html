@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les chats les plus moches (mais attachants)</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="top-nav">
+            <a href="index.html" class="btn-home">&larr; Retour à l'accueil</a>
+        </nav>
+    <!-- Bouton burger permettant d'ouvrir et de fermer le menu popover -->
+    <button class="chat" type="button" popovertarget="menu" aria-label="Menu">
+      😺
+    </button>
+
+    <!-- Navigation principale déclarée comme popover grâce à l'attribut popover -->
+    <!-- L'identifiant menu permet au bouton burger de cibler cet élément -->
+    <nav class="menu" id="menu" popover aria-label="Main menu">
+
+      <!-- Bouton permettant de fermer explicitement le menu -->
+      <button
+        class="menu__close chat chat--close"
+        type="button"
+        popovertarget="menu"
+        popovertargetaction="hide"
+        aria-label="Close the menu"
+        autofocus
+      >
+        😺
+      </button>
+
+      <!-- Liste des différents liens de navigation -->
+      <ul class="menu__list">
+
+        <!-- Premier élément du menu -->
+        <li class="chien">
+          <a class="menu__link" href="chien.html">chien</a>
+        </li>
+
+        <!-- Deuxième élément du menu -->
+        <li class="chat">
+          <a class="menu__link" href="chat.html">chat</a>
+        </li>
+
+      </ul>
+    </nav>
+    <h1>Les chats les plus moches du monde</h1>
+    <p class="subtitle">Parce que la beauté intérieure compte aussi (même quand on ressemble à un gremlin).</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Voici une sélection de chats au physique... particulier</h2>
+            <ul class="cats-grid">
+                <li>
+                    <article>
+                        <img src="assets/img/sphynx.jpg" alt="Photo d'un chat Sphynx tout ridé">
+                        <div class="card-content">
+                            <h3>1 - Le Sphynx</h3>
+                            <p class="breed">Chat nu &bull; Canada</p>
+                            <p>Dépourvu de pelage et couvert de plis profonds, le Sphynx affiche un air perpétuellement renfrogné qui lui donne des allures de petite gargouille fripée.</p>
+                        </div>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <img src="assets/img/lykoi.jpg" alt="Photo d'un chat Lykoi à l'apparence de loup-garou">
+                        <div class="card-content">
+                            <h3>2 - Le Lykoi</h3>
+                            <p class="breed">Chat loup-garou &bull; États-Unis</p>
+                            <p>Avec son pelage clairsemé gris-noir et son museau dépourvu de poils autour des yeux, ce chat est surnommé le « chat loup-garou ».</p>
+                        </div>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <img src="assets/img/harvey.jpg" alt="Photo de Harvey le chat borgne avec une dent qui dépasse">
+                        <div class="card-content">
+                            <h3>3 - Harvey le Pirate</h3>
+                            <p class="breed">Chat de gouttière &bull; Star du web</p>
+                            <p>Un seul œil grand ouvert, une dent inférieure qui dépasse en permanence et un air de vieux loup de mer : un charme totalement atypique.</p>
+                        </div>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <img src="assets/img/cornish.jpg" alt="Photo d'un chat Cornish Rex aux grandes oreilles">
+                        <div class="card-content">
+                            <h3>4 - Le Cornish Rex</h3>
+                            <p class="breed">Rex à poil frisé &bull; Royaume-Uni</p>
+                            <p>Avec son crâne ovoïde, ses immenses oreilles de chauve-souris et son poil ultra-court ondulé, il semble tout droit sorti d'un film de science-fiction.</p>
+                        </div>
+                    </article>
+                </li>
+            </ul>
+        </section>
+        <div class="bottom-actions">
+            <a href="index.html" class="btn-home-dark">&larr; Retour à l'accueil</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 — Hommage aux chats atypiques et irrésistibles</p>
+    </footer>
+
+</body>
+</html>
